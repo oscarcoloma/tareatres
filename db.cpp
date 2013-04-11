@@ -16,7 +16,7 @@ int main(int argc, char * argv[])
     cnn = PQsetdbLogin(host,port,NULL,NULL,dataBase,user,passwd);
     if (PQstatus(cnn) != CONNECTION_BAD) {
         cout << "Estamos conectados a PostgreSQL!" << endl;
-        result = PQexec(cnn, "SELECT * FROM nombre_tabla");
+        result = PQexec(cnn, "select c.docente_id as codigo deocente, c.curso_id as codigo curso, avg(a.nota) as Promedio,stddev(a.nota) as Desv_Estandar from asignaturas_cursadas as a,cursos as c where c.curso_id = a.curso_id group by c.curso_id");
         if (result != NULL) {
             int tuplas = PQntuples(result);
             int campos = PQnfields(result);
