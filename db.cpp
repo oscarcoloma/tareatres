@@ -1,4 +1,5 @@
 using namespace std;
+#include <cstdlib>
 #include <iostream>
 #include <libpq-fe.h>
 
