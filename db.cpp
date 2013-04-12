@@ -1,7 +1,7 @@
 using namespace std;
 #include <iostream>
 #include <libpq-fe.h>
-#include <pgconn.h>
+
 //Gonzalo Herrera Vivanco
 //Rodrigo Cardenaz
 //Oscar Coloma
